@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
+/* https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhdmVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bg.jpg), 
+    url(ink1.jpg);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 5s;
+}
+header { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.logo {
+    font-family: 'Rancho', cursive;
+    color: #293241;
+    text-decoration: none;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.menu {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(menu.png);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.menu.active {
+    background: url(close.png);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.play-vid {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.play-vid img {
+    max-width: 40px;
+}
+.play-vid span {
+    font-weight: 600;
+    color: #293241;
+    margin-left: 10px;
+}
+.sosmed {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sosmed li {
+    list-style: none;
+}
+.sosmed li a {
+    display: inline-block;
+    text-decoration: none;
+    transform: scale(0.7);
+}
+.sosmed li a img {
+    width: 40px;
+    height: 40px;
+}
+.content {
+    padding: 50px;
+}
+.content h1 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 9em;
+    line-height: 1em;
+    color: #3d5a80;
+    text-shadow: 10px 0 10px rgba(0,0,0,0.3);
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.navbar.active {
+    opacity: 1;
+    visibility: visible;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+}
+.navbar ul li {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.navbar ul li a {
+    display: inline-block;
+    color: #293241;
+    font-size: 1.6em;
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar ul li a:hover {
+    color: #ee6c4d;
+}
+.promotion-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgba(255,255,255,0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+.promotion-video.active {
+    opacity: 1;
+    visibility: visible;
+}
+.promotion-video video {
+    max-width: 900px;
+    max-height: 400px;
+    outline: none;
+}
+.promotion-video .close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    max-width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 991px) {
+    section {
+        background-size: 180%;
+    }
+    .content h1 {
+        font-size: 20vw;
+        color: #a1c4ff;
+        text-align: center;
+        text-shadow: 10px 0 10px rgba(0,0,0,0.5);
+    }
+    .promotion-video video {
+        width: 90%;
+    }
+}
+
+
+
+
+
+

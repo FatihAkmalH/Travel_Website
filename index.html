@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refreshing | Travel Website</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+    <section>
+        <!-- HEADER -->
+        <header>
+            <a href="#" class="logo">Refreshing</a>
+            <div class="menu" onclick="activeMenu();"></div>
+        </header>
+        <!-- CONTENT -->
+        <div class="content">
+            <h1>Enjoy<br>The Trip</h1>
+        </div>
+        <!-- Play BUTTON -->
+        <div class="play-vid" onclick="pvToggle();">
+            <img src="assets/play.png"><span>Play Video</span>
+        </div>
+        <!-- SOCIAL MEDIA -->
+        <ul class="sosmed">
+            <li><a href="#"><img src="assets/facebook.png"></a></li>
+            <li><a href="#"><img src="assets/instagram.png"></a></li>
+            <li><a href="#"><img src="assets/twitter.png"></a></li>
+        </ul>
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Offer</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="promotion-video">
+        <video src="assets/video.mp4" controls="true"></video>
+        <img src="assets/close.png" class="close" onclick="pvToggle();">
+    </div>
+    <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
